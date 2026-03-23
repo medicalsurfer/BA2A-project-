@@ -275,9 +275,10 @@
                 <?php foreach ($products as $product): ?>
                 <div class="product-card rounded-2xl overflow-hidden fade-in">
                     <div class="relative overflow-hidden">
-                        <img src="<?php echo htmlspecialchars($product['image']); ?>"
-                             alt="<?php echo htmlspecialchars($product['name']); ?>"
-                             class="product-image">
+                      <img src="<?php echo htmlspecialchars($product['image']); ?>"
+                        alt="<?php echo htmlspecialchars($product['name']); ?>"
+                        class="product-image"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'200\'%3E%3Crect width=\'300\' height=\'200\' fill=\'%23cccccc\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'16\' fill=\'%23666\'%3ENo Image%3C/text%3E%3C/svg%3E'">
                         <div class="absolute top-4 right-4">
                             <span class="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-bold">
                                 NEW

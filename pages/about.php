@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user']);
+?>
 <html lang="en" class="h-full">
 <head>
     <meta charset="UTF-8">
@@ -209,11 +213,6 @@
 
         // Initialize Lucide icons
         document.addEventListener('DOMContentLoaded', () => {
-            // Restore user session
-            <?php
-            session_start();
-            $isLoggedIn = isset($_SESSION['user']);
-            ?>
 
             // Observe fade-in elements
             const fadeObserver = new IntersectionObserver((entries) => {

@@ -45,9 +45,9 @@ INSERT INTO categories (name, description) VALUES
 
 -- Insert sample products
 INSERT INTO products (name, price, image, description, amount, category_id) VALUES
-('Wireless Headphones', 99.99, 'https://via.placeholder.com/300x200?text=Headphones', 'High-quality wireless headphones with noise cancellation.', 50, 2),
-('Smart Watch', 199.99, 'https://via.placeholder.com/300x200?text=Smart+Watch', 'Feature-packed smart watch with health tracking.', 30, 1),
-('Laptop', 899.99, 'https://via.placeholder.com/300x200?text=Laptop', 'Powerful laptop for work and entertainment.', 15, 4),
-('Gaming Mouse', 49.99, 'https://via.placeholder.com/300x200?text=Gaming+Mouse', 'Ergonomic gaming mouse with RGB lighting.', 75, 3),
-('Bluetooth Speaker', 79.99, 'https://via.placeholder.com/300x200?text=Speaker', 'Portable Bluetooth speaker with excellent sound quality.', 40, 2),
-('Tablet', 349.99, 'https://via.placeholder.com/300x200?text=Tablet', 'Versatile tablet for productivity and entertainment.', 25, 4);
+('Wireless Headphones', 99.99, '', 'High-quality wireless headphones with noise cancellation.', 50, 2),
+('Smart Watch', 199.99, '', 'Feature-packed smart watch with health tracking.', 30, 1),
+('Laptop', 899.99, '', 'Powerful laptop for work and entertainment.', 15, 4),
+('Gaming Mouse', 49.99, '', 'Ergonomic gaming mouse with RGB lighting.', 75, 3),
+('Bluetooth Speaker', 79.99, '', 'Portable Bluetooth speaker with excellent sound quality.', 40, 2),
+('Tablet', 349.99, '', 'Versatile tablet for productivity and entertainment.', 25, 4);

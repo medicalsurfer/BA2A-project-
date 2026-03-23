@@ -6,6 +6,24 @@
     <title>Add Product - Ecommerce</title>
     <script src="../assets/css/tailwind.css"></script>
 </head>
+<script>
+document.getElementById('image_file').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        let preview = document.getElementById('image_preview');
+        if (!preview) {
+            preview = document.createElement('img');
+            preview.id = 'image_preview';
+            preview.className = 'mt-3 rounded-lg w-full max-h-48 object-cover border border-purple-500';
+            document.getElementById('image_file').parentNode.appendChild(preview);
+        }
+        preview.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+});
+</script>
 <body class="bg-gray-900 text-white min-h-screen">
 <?php
 session_start();
@@ -44,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $target_path = $upload_dir . $unique_name;
 
             if (move_uploaded_file($_FILES['image']['tmp_name'], $target_path)) {
-                $image_path = "uploads/" . $unique_name;
+             $image_path = "/BA2A-project-/uploads/" . $unique_name;
             } else {
                 $error = "Failed to upload image.";
             }

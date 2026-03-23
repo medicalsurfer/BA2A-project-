@@ -141,7 +141,7 @@ require_once "../database/connection.php";
                         echo '<p><span class="font-medium text-blue-300">Category:</span> ' . htmlspecialchars($product['category_name']) . '</p>';
                     }
                     echo '</div>';
-                    echo '<img src="' . htmlspecialchars($product['image']) . '" alt="' . htmlspecialchars($product['name']) . '" class="w-full h-24 object-cover rounded-lg mt-3">';
+                    echo '<img src="' . htmlspecialchars($product['image']) . '" alt="' . htmlspecialchars($product['name']) . '" class="w-full h-24 object-cover rounded-lg mt-3" onerror="this.src=\'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'200\'%3E%3Crect width=\'300\' height=\'200\' fill=\'%23cccccc\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'16\' fill=\'%23666\'%3ENo Image%3C/text%3E%3C/svg%3E\'">';
                     echo '</div>';
                 }
                 echo '</div>';
